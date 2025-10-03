@@ -1,0 +1,405 @@
+2025-09-22 12:08:06,117[http-nio-6565-exec-3]INFO useranalyze-A new gymBooking has been created for zumba+ at 2025-09-20
+2025-09-22 14:54:43,245[http-nio-6565-exec-4]INFO useranalyze-A new gymBooking has been created for zumba+ at 2025-09-10
+2025-09-22 14:56:44,043[http-nio-6565-exec-6]INFO useranalyze-A new gymBooking has been created for zumba+ at 2025-09-22
+2025-09-23 12:59:12,983[http-nio-6565-exec-2]INFO useranalyze-Admin added a new instructor with the name troll trollson.
+2025-09-23 12:59:21,483[http-nio-6565-exec-3]INFO useranalyze-Admin updated a workout with name dancing.
+2025-09-24 17:08:13,069[http-nio-6565-exec-8]INFO useranalyze-Admin added a new instructor with the name troll trollson.
+2025-09-24 17:08:29,152[http-nio-6565-exec-6]INFO useranalyze-Admin added a new workout with org.example.wigellgym.entities.Instructor@3e9a00d1.
+2025-09-24 17:09:29,499[http-nio-6565-exec-1]INFO useranalyze-A new gymBooking has been created for zumba+ at 2025-09-25
+2025-09-24 17:10:35,327[http-nio-6565-exec-1]INFO useranalyze-A new gymBooking has been created for zumba+ at 2025-09-25
+2025-09-24 20:24:05,335[http-nio-6565-exec-1]INFO useranalyze-A new gymBooking has been created for zumba+ at 2025-09-25
+2025-09-24 20:27:46,104[http-nio-6565-exec-1]INFO useranalyze-A new gymBooking has been created for zumba+ at 2025-09-25
+2025-09-24 20:39:17,964[http-nio-6565-exec-1]INFO useranalyze-A new gymBooking has been created for zumba+ at 2025-09-25
+2025-09-24 20:41:36,895[http-nio-6565-exec-2]INFO useranalyze-A new gymBooking has been created for zumba+ at 2025-09-25
+2025-09-24 20:42:35,062[http-nio-6565-exec-1]INFO useranalyze-A new gymBooking has been created for zumba+ at 2025-09-25
+2025-09-24 20:55:33,100[http-nio-6565-exec-2]INFO useranalyze-User created a new gymBooking for zumba+ at 2025-09-25
+2025-09-24 21:00:09,595[http-nio-6565-exec-5]INFO useranalyze-Admin added a new workout with org.example.wigellgym.entities.Instructor@15754e42.
+2025-09-24 21:01:37,857[http-nio-6565-exec-2]INFO useranalyze-Admin added a new workout with troll trollson.
+2025-09-24 21:14:50,737[http-nio-6565-exec-1]INFO useranalyze-User created a new gymBooking for zumba+ at 2025-09-25
+2025-09-25 08:51:35,090[http-nio-6565-exec-1]INFO useranalyze-User created a new gymBooking for zumba+ at 2025-09-25
+2025-09-25 08:52:27,035[http-nio-6565-exec-2]INFO useranalyze-User created a new gymBooking for zumba+ at 2025-09-25
+2025-09-25 08:58:06,057[http-nio-6565-exec-2]INFO useranalyze-User created a new gymBooking for zumba+ at 2025-09-25
+2025-09-25 11:54:13,246[http-nio-6565-exec-1]INFO useranalyze-Admin added a new instructor with the name Adam Hemmingsson.
+2025-09-25 11:55:02,346[http-nio-6565-exec-4]INFO useranalyze-Admin added a new workout with the instructor Adam Hemmingsson.
+2025-09-25 11:57:26,654[http-nio-6565-exec-10]INFO useranalyze-Admin updated a workout with name Benchpress90.
+2025-09-25 15:39:58,037[http-nio-6565-exec-1]INFO useranalyze-Admin added a new instructor with the name Adam Hemmingsson.
+2025-09-25 15:40:10,583[http-nio-6565-exec-3]INFO useranalyze-Admin added a new workout with the instructor Adam Hemmingsson.
+2025-09-25 15:41:45,493[http-nio-6565-exec-6]INFO useranalyze-User created a new booking for Benchpress60 at 2025-09-25
+2025-09-25 15:59:37,339[http-nio-6565-exec-9]INFO useranalyze-Admin added a new workout with the instructor Adam Hemmingsson.
+2025-09-25 16:00:03,263[http-nio-6565-exec-10]INFO useranalyze-User created a new booking for Benchpress60 at 2025-09-26
+2025-09-25 16:01:47,562[http-nio-6565-exec-5]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:01:49,118[http-nio-6565-exec-6]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:01:50,319[http-nio-6565-exec-4]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:01:52,137[http-nio-6565-exec-8]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:01:53,305[http-nio-6565-exec-9]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:01:54,573[http-nio-6565-exec-10]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:02:32,593[http-nio-6565-exec-2]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:02:33,782[http-nio-6565-exec-1]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:02:34,913[http-nio-6565-exec-3]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:02:36,001[http-nio-6565-exec-7]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:02:37,307[http-nio-6565-exec-5]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:02:38,329[http-nio-6565-exec-6]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:02:39,456[http-nio-6565-exec-4]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:02:40,542[http-nio-6565-exec-8]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:02:41,808[http-nio-6565-exec-9]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:09:30,983[http-nio-6565-exec-1]INFO useranalyze-Admin added a new instructor with the name Adam Hemmingsson.
+2025-09-25 16:09:43,040[http-nio-6565-exec-3]INFO useranalyze-Admin added a new workout with the instructor Adam Hemmingsson.
+2025-09-25 16:10:29,359[http-nio-6565-exec-8]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:12:00,386[http-nio-6565-exec-2]INFO useranalyze-Admin added a new instructor with the name Adam Hemmingsson.
+2025-09-25 16:12:02,550[http-nio-6565-exec-3]INFO useranalyze-Admin added a new workout with the instructor Adam Hemmingsson.
+2025-09-25 16:12:08,220[http-nio-6565-exec-4]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:12:37,072[http-nio-6565-exec-5]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:12:44,536[http-nio-6565-exec-6]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:15:02,926[http-nio-6565-exec-9]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:15:05,591[http-nio-6565-exec-10]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:15:16,612[http-nio-6565-exec-1]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:16:43,262[http-nio-6565-exec-1]INFO useranalyze-Admin added a new instructor with the name Adam Hemmingsson.
+2025-09-25 16:16:49,708[http-nio-6565-exec-3]INFO useranalyze-Admin added a new workout with the instructor Adam Hemmingsson.
+2025-09-25 16:17:02,215[http-nio-6565-exec-8]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:17:32,044[http-nio-6565-exec-5]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:17:33,786[http-nio-6565-exec-6]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:17:35,646[http-nio-6565-exec-7]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:17:37,498[http-nio-6565-exec-4]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:17:39,633[http-nio-6565-exec-9]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:19:49,753[http-nio-6565-exec-5]INFO useranalyze-Admin added a new instructor with the name Adam Hemmingsson.
+2025-09-25 16:19:51,810[http-nio-6565-exec-7]INFO useranalyze-Admin added a new workout with the instructor Adam Hemmingsson.
+2025-09-25 16:19:58,251[http-nio-6565-exec-8]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:19:59,773[http-nio-6565-exec-10]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:20:01,520[http-nio-6565-exec-6]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:20:03,139[http-nio-6565-exec-3]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:20:04,579[http-nio-6565-exec-4]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:22:40,979[http-nio-6565-exec-1]INFO useranalyze-Admin added a new instructor with the name Adam Hemmingsson.
+2025-09-25 16:22:44,344[http-nio-6565-exec-3]INFO useranalyze-Admin added a new workout with the instructor Adam Hemmingsson.
+2025-09-25 16:23:01,908[http-nio-6565-exec-8]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:23:03,655[http-nio-6565-exec-10]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:23:04,981[http-nio-6565-exec-6]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:23:06,175[http-nio-6565-exec-7]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:23:07,493[http-nio-6565-exec-2]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:54:07,985[http-nio-6565-exec-1]INFO useranalyze-Admin added a new instructor with the name Adam Hemmingsson.
+2025-09-25 16:54:11,074[http-nio-6565-exec-3]INFO useranalyze-Admin added a new workout with the instructor Adam Hemmingsson.
+2025-09-25 16:54:16,765[http-nio-6565-exec-4]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:54:20,816[http-nio-6565-exec-5]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:54:22,462[http-nio-6565-exec-6]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:54:23,905[http-nio-6565-exec-7]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:54:25,103[http-nio-6565-exec-8]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:56:46,055[http-nio-6565-exec-1]INFO useranalyze-Admin added a new instructor with the name Adam Hemmingsson.
+2025-09-25 16:56:49,796[http-nio-6565-exec-3]INFO useranalyze-Admin added a new workout with the instructor Adam Hemmingsson.
+2025-09-25 16:56:53,203[http-nio-6565-exec-4]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:56:54,422[http-nio-6565-exec-5]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:56:55,530[http-nio-6565-exec-6]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:56:56,584[http-nio-6565-exec-7]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:56:57,721[http-nio-6565-exec-8]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:57:53,820[http-nio-6565-exec-1]INFO useranalyze-User canceled the booking to Benchpress90 at 2025-09-26.
+2025-09-25 16:59:15,613[http-nio-6565-exec-2]INFO useranalyze-Admin added a new instructor with the name Adam Hemmingsson.
+2025-09-25 16:59:22,803[http-nio-6565-exec-3]INFO useranalyze-Admin added a new workout with the instructor Adam Hemmingsson.
+2025-09-25 16:59:32,252[http-nio-6565-exec-4]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:59:33,424[http-nio-6565-exec-5]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:59:34,720[http-nio-6565-exec-6]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:59:35,950[http-nio-6565-exec-7]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:59:37,168[http-nio-6565-exec-8]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-25 16:59:48,420[http-nio-6565-exec-1]INFO useranalyze-User canceled the booking to Benchpress90 at 2025-09-26.
+2025-09-25 17:00:26,434[http-nio-6565-exec-3]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-26 08:58:27,761[http-nio-6565-exec-2]INFO useranalyze-Admin added a new instructor with the name Adam Hemmingsson.
+2025-09-26 08:58:31,584[http-nio-6565-exec-3]INFO useranalyze-Admin added a new workout with the instructor Adam Hemmingsson.
+2025-09-26 08:58:36,502[http-nio-6565-exec-4]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-26 09:12:41,439[http-nio-6565-exec-1]INFO useranalyze-Admin added a new instructor with the name Adam Hemmingsson.
+2025-09-26 09:13:01,699[http-nio-6565-exec-3]INFO useranalyze-Admin added a new workout with the instructor Adam Hemmingsson.
+2025-09-26 09:13:34,427[http-nio-6565-exec-8]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-26 09:13:58,169[http-nio-6565-exec-9]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-26 09:13:59,508[http-nio-6565-exec-10]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-26 09:14:00,963[http-nio-6565-exec-2]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-26 09:14:02,457[http-nio-6565-exec-1]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-26 09:36:12,935[http-nio-6565-exec-9]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-28
+2025-09-26 09:36:32,677[http-nio-6565-exec-2]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-28
+2025-09-26 10:37:46,436[http-nio-6565-exec-1]INFO useranalyze-Admin added a new instructor with the name Adam Hemmingsson.
+2025-09-26 10:37:48,844[http-nio-6565-exec-3]INFO useranalyze-Admin added a new workout with the instructor Adam Hemmingsson.
+2025-09-26 10:37:57,303[http-nio-6565-exec-4]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-28
+2025-09-26 10:50:47,859[http-nio-6565-exec-1]INFO useranalyze-Admin added a new instructor with the name Adam Hemmingsson.
+2025-09-26 10:50:53,277[http-nio-6565-exec-3]INFO useranalyze-Admin added a new workout with the instructor Adam Hemmingsson.
+2025-09-26 10:51:20,193[http-nio-6565-exec-7]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-26 10:52:19,882[http-nio-6565-exec-6]INFO useranalyze-Admin added a new workout with the instructor Adam Hemmingsson.
+2025-09-26 10:52:34,823[http-nio-6565-exec-10]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-26 21:17:48,811[http-nio-6565-exec-8]INFO useranalyze-Admin added a new instructor with the name Adam Hemmingsson.
+2025-09-26 21:17:55,438[http-nio-6565-exec-4]INFO useranalyze-Admin added a new workout with the instructor Adam Hemmingsson.
+2025-09-26 21:18:00,058[http-nio-6565-exec-6]INFO useranalyze-Admin added a new workout with the instructor Adam Hemmingsson.
+2025-09-26 21:18:14,259[http-nio-6565-exec-9]INFO useranalyze-Admin deleted a workout with id 1.
+2025-09-26 21:19:18,503[http-nio-6565-exec-3]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-26 21:19:20,063[http-nio-6565-exec-2]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-26
+2025-09-26 21:20:29,729[http-nio-6565-exec-1]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-28
+2025-09-26 21:20:39,457[http-nio-6565-exec-2]INFO useranalyze-User canceled the booking to Benchpress90 at 2025-09-28.
+2025-09-29 10:42:23,277[http-nio-8081-exec-10]INFO useranalyze-Admin added a new workout with the instructor Lars Larsson.
+2025-09-29 10:45:34,675[http-nio-8081-exec-8]INFO useranalyze-Admin added a new workout with the instructor Lars Larsson.
+2025-09-29 10:53:08,208[http-nio-8081-exec-4]INFO useranalyze-User created a new booking for Benchpress90 at 2025-09-29
+2025-09-29 11:08:00,551[http-nio-8081-exec-8]INFO useranalyze-Admin updated a workout with name Benchpress90.
+2025-09-29 11:29:57,905[http-nio-8081-exec-1]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-01
+2025-09-29 11:36:08,520[http-nio-8081-exec-1]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-01
+2025-09-29 11:36:53,049[http-nio-8081-exec-8]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-01
+2025-09-29 11:40:12,366[http-nio-8081-exec-7]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-01
+2025-09-29 11:40:51,302[http-nio-8081-exec-5]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-01
+2025-09-29 11:43:22,751[http-nio-8081-exec-5]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-01
+2025-09-29 11:44:03,988[http-nio-8081-exec-1]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-01
+2025-09-29 11:49:23,464[http-nio-8081-exec-1]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-01
+2025-09-29 11:49:24,853[http-nio-8081-exec-3]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-01
+2025-09-29 12:10:42,826[http-nio-8081-exec-1]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-01
+2025-09-29 12:10:56,237[http-nio-8081-exec-3]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-01
+2025-09-29 12:18:09,891[http-nio-8081-exec-7]INFO useranalyze-Admin added a new instructor with the name Adam Hemmingsson.
+2025-09-29 12:19:03,429[http-nio-8081-exec-5]INFO useranalyze-Admin added a new workout with the instructor Adam Hemmingsson.
+2025-09-29 12:19:33,067[http-nio-8081-exec-10]INFO useranalyze-Admin updated a workout with name Benchpress90.
+2025-09-29 12:20:26,565[http-nio-8081-exec-6]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-01
+2025-09-29 12:20:35,744[http-nio-8081-exec-10]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-01
+2025-09-29 12:20:41,883[http-nio-8081-exec-1]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-01
+2025-09-29 12:21:17,446[http-nio-8081-exec-7]INFO useranalyze-Admin updated a workout with name Benchpress90.
+2025-09-29 12:21:34,197[http-nio-8081-exec-3]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-01
+2025-09-29 12:21:39,423[http-nio-8081-exec-8]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-01
+2025-09-29 12:21:41,478[http-nio-8081-exec-2]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-01
+2025-09-29 12:21:42,910[http-nio-8081-exec-9]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-01
+2025-09-29 12:21:44,240[http-nio-8081-exec-5]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-01
+2025-09-29 12:21:47,594[http-nio-8081-exec-4]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-01
+2025-09-29 12:21:48,821[http-nio-8081-exec-7]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-01
+2025-09-29 12:23:38,369[http-nio-8081-exec-9]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-01
+2025-09-29 12:23:39,299[http-nio-8081-exec-4]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-01
+2025-09-29 12:23:40,201[http-nio-8081-exec-7]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-01
+2025-09-29 12:23:41,167[http-nio-8081-exec-6]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-01
+2025-09-29 12:23:42,032[http-nio-8081-exec-10]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-01
+2025-09-29 13:51:51,767[http-nio-8081-exec-5]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-01
+2025-09-29 13:52:03,027[http-nio-8081-exec-6]INFO useranalyze-Admin updated a workout with name Benchpress90.
+2025-09-29 13:53:28,604[http-nio-8081-exec-10]INFO useranalyze-Admin added a new workout with the instructor Lars Larsson.
+2025-09-29 13:53:39,732[http-nio-8081-exec-9]INFO useranalyze-Admin updated a workout with name Benchpress90.
+2025-09-29 13:54:55,298[http-nio-8081-exec-9]INFO useranalyze-Admin added a new workout with the instructor Lars Larsson.
+2025-09-29 13:55:26,889[http-nio-8081-exec-10]INFO useranalyze-Admin updated a workout with name Benchpress90.
+2025-09-29 13:55:32,283[http-nio-8081-exec-1]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-01
+2025-09-29 13:55:33,776[http-nio-8081-exec-5]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-01
+2025-09-29 13:55:35,163[http-nio-8081-exec-6]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-01
+2025-09-29 13:55:36,202[http-nio-8081-exec-3]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-01
+2025-09-29 13:55:49,152[http-nio-8081-exec-2]INFO useranalyze-Admin updated a workout with name Benchpress1000.
+2025-09-29 13:56:19,618[http-nio-8081-exec-4]INFO useranalyze-User created a new booking for Benchpress1000 at 2025-10-02
+2025-09-29 13:56:22,816[http-nio-8081-exec-8]INFO useranalyze-User created a new booking for Benchpress1000 at 2025-10-02
+2025-09-29 13:56:23,792[http-nio-8081-exec-10]INFO useranalyze-User created a new booking for Benchpress1000 at 2025-10-02
+2025-09-29 13:56:24,651[http-nio-8081-exec-1]INFO useranalyze-User created a new booking for Benchpress1000 at 2025-10-02
+2025-09-29 13:56:25,541[http-nio-8081-exec-5]INFO useranalyze-User created a new booking for Benchpress1000 at 2025-10-02
+2025-09-29 13:56:52,531[http-nio-8081-exec-9]INFO useranalyze-Admin updated a workout with name Benchpress1000.
+2025-09-29 14:27:37,280[http-nio-8081-exec-1]INFO useranalyze-Admin added a new workout with the instructor Lars Larsson.
+2025-09-29 14:28:01,062[http-nio-8081-exec-3]INFO useranalyze-User created a new booking for yoga50 at 2025-10-02
+2025-09-29 14:28:02,272[http-nio-8081-exec-4]INFO useranalyze-User created a new booking for yoga50 at 2025-10-02
+2025-09-29 14:28:03,229[http-nio-8081-exec-5]INFO useranalyze-User created a new booking for yoga50 at 2025-10-02
+2025-09-29 14:28:04,158[http-nio-8081-exec-6]INFO useranalyze-User created a new booking for yoga50 at 2025-10-02
+2025-09-29 14:28:05,188[http-nio-8081-exec-7]INFO useranalyze-User created a new booking for yoga50 at 2025-10-02
+2025-09-29 14:28:54,956[http-nio-8081-exec-6]INFO useranalyze-Admin updated a workout with name yoga50.
+2025-09-29 14:29:41,185[http-nio-8081-exec-9]INFO useranalyze-Admin updated a workout with name yoga50.
+2025-09-29 14:30:29,245[http-nio-8081-exec-6]INFO useranalyze-Admin updated a workout with name yoga50.
+2025-09-29 14:30:52,925[http-nio-8081-exec-3]INFO useranalyze-User created a new booking for yoga50 at 2025-10-02
+2025-09-29 14:31:13,736[http-nio-8081-exec-9]INFO useranalyze-User created a new booking for yoga50 at 2025-10-10
+2025-09-29 14:31:22,430[http-nio-8081-exec-6]INFO useranalyze-User created a new booking for yoga50 at 2025-10-10
+2025-09-29 14:31:23,358[http-nio-8081-exec-2]INFO useranalyze-User created a new booking for yoga50 at 2025-10-10
+2025-09-29 14:31:24,230[http-nio-8081-exec-4]INFO useranalyze-User created a new booking for yoga50 at 2025-10-10
+2025-09-29 14:31:25,127[http-nio-8081-exec-8]INFO useranalyze-User created a new booking for yoga50 at 2025-10-10
+2025-09-29 14:31:26,017[http-nio-8081-exec-7]INFO useranalyze-User created a new booking for yoga50 at 2025-10-10
+2025-09-29 14:32:07,224[http-nio-8081-exec-6]INFO useranalyze-User canceled the booking to yoga50 at 2025-10-10.
+2025-09-29 14:32:31,884[http-nio-8081-exec-7]INFO useranalyze-User created a new booking for yoga50 at 2025-10-10
+2025-09-29 14:32:51,321[http-nio-8081-exec-9]INFO useranalyze-User canceled the booking to yoga50 at 2025-10-10.
+2025-09-29 14:32:54,759[http-nio-8081-exec-6]INFO useranalyze-User canceled the booking to yoga50 at 2025-10-10.
+2025-09-29 14:32:59,320[http-nio-8081-exec-2]INFO useranalyze-User canceled the booking to yoga50 at 2025-10-10.
+2025-09-29 14:34:06,340[http-nio-8081-exec-9]INFO useranalyze-User canceled the booking to yoga50 at 2025-10-02.
+2025-09-29 14:34:11,336[http-nio-8081-exec-6]INFO useranalyze-User canceled the booking to yoga50 at 2025-10-02.
+2025-09-29 14:34:14,403[http-nio-8081-exec-2]INFO useranalyze-User canceled the booking to yoga50 at 2025-10-02.
+2025-09-29 14:34:28,760[http-nio-8081-exec-3]INFO useranalyze-User canceled the booking to yoga50 at 2025-10-02.
+2025-09-29 14:41:07,033[http-nio-8081-exec-1]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-10
+2025-09-29 14:41:08,509[http-nio-8081-exec-3]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-10
+2025-09-29 14:42:13,802[http-nio-8081-exec-2]INFO useranalyze-Admin updated a workout with name Benchpress90.
+2025-09-29 14:42:31,936[http-nio-8081-exec-5]INFO useranalyze-Admin updated a workout with name Benchpress90.
+2025-09-29 14:43:01,782[http-nio-8081-exec-6]INFO useranalyze-User canceled the booking to Benchpress90 at 2025-10-10.
+2025-09-29 14:45:23,872[http-nio-8081-exec-1]INFO useranalyze-Admin updated a workout with name Benchpress90.
+2025-09-29 14:45:38,093[http-nio-8081-exec-6]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-10
+2025-09-29 14:45:39,164[http-nio-8081-exec-4]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-10
+2025-09-29 14:46:17,251[http-nio-8081-exec-10]INFO useranalyze-User canceled the booking to Benchpress90 at 2025-10-10.
+2025-09-30 08:45:31,409[http-nio-8081-exec-8]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-10
+2025-09-30 08:47:10,561[http-nio-8081-exec-7]INFO useranalyze-Admin added a new instructor with the name Adam Hemmingsson.
+2025-09-30 08:47:57,829[http-nio-8081-exec-4]INFO useranalyze-Admin added a new workout with the instructor Lars Larsson.
+2025-09-30 09:07:41,261[http-nio-8081-exec-1]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-10
+2025-09-30 09:07:42,911[http-nio-8081-exec-2]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-10
+2025-09-30 09:10:08,919[http-nio-8081-exec-1]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-10
+2025-09-30 09:10:10,267[http-nio-8081-exec-3]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-10
+2025-09-30 09:10:52,247[http-nio-8081-exec-7]INFO useranalyze-User canceled the booking to Benchpress90 at 2025-10-10.
+2025-09-30 09:11:32,106[http-nio-8081-exec-4]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-10
+2025-09-30 09:12:17,885[http-nio-8081-exec-4]INFO useranalyze-User canceled the booking to Benchpress90 at 2025-10-10.
+2025-09-30 09:12:21,759[http-nio-8081-exec-5]INFO useranalyze-User canceled the booking to Benchpress90 at 2025-10-10.
+2025-09-30 09:12:43,748[http-nio-8081-exec-10]INFO useranalyze-User canceled the booking to Benchpress90 at 2100-01-01.
+2025-09-30 09:12:57,410[http-nio-8081-exec-4]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-10
+2025-09-30 09:12:58,594[http-nio-8081-exec-5]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-10
+2025-09-30 09:13:25,586[http-nio-8081-exec-10]INFO useranalyze-User canceled the booking to Benchpress90 at 2025-10-10.
+2025-09-30 09:13:41,154[http-nio-8081-exec-4]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-10
+2025-09-30 09:14:25,682[http-nio-8081-exec-1]INFO useranalyze-User canceled the booking to Benchpress90 at 2025-10-10.
+2025-09-30 09:26:57,561[http-nio-8081-exec-2]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-10
+2025-09-30 09:26:59,032[http-nio-8081-exec-4]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-10
+2025-09-30 09:27:34,148[http-nio-8081-exec-8]INFO useranalyze-User canceled the booking to Benchpress90 at 2100-01-01.
+2025-09-30 09:28:19,510[http-nio-8081-exec-8]INFO useranalyze-User canceled the booking to Benchpress90 at 2025-10-10.
+2025-09-30 09:28:47,294[http-nio-8081-exec-4]INFO useranalyze-User canceled the booking to Benchpress90 at 2025-10-10.
+2025-09-30 09:28:51,389[http-nio-8081-exec-3]INFO useranalyze-Admin updated a workout with name Benchpress90.
+2025-09-30 09:29:20,644[http-nio-8081-exec-6]INFO useranalyze-Admin updated a workout with name Benchpress90.
+2025-09-30 09:30:19,905[http-nio-8081-exec-4]INFO useranalyze-Admin updated a workout with name Benchpress90.
+2025-09-30 09:31:22,714[http-nio-8081-exec-1]INFO useranalyze-Admin updated a workout with name Benchpress90.
+2025-09-30 09:36:59,073[http-nio-8081-exec-4]INFO useranalyze-Admin updated a workout with name jgmn,.
+2025-09-30 10:41:02,180[http-nio-8081-exec-7]INFO useranalyze-Admin updated a workout with name strength.
+2025-09-30 10:43:05,469[http-nio-8081-exec-9]INFO useranalyze-Admin added a new workout with the instructor Lars Larsson.
+2025-09-30 10:43:33,581[http-nio-8081-exec-7]INFO useranalyze-Admin updated a workout with name strength.
+2025-09-30 10:43:38,572[http-nio-8081-exec-5]INFO useranalyze-Admin updated a workout with name strength.
+2025-09-30 10:46:16,096[http-nio-8081-exec-5]INFO useranalyze-Admin updated a workout with name stength60.
+2025-09-30 10:46:42,286[http-nio-8081-exec-1]INFO useranalyze-User created a new booking for stength60 at 2025-10-10
+2025-09-30 10:46:43,404[http-nio-8081-exec-5]INFO useranalyze-User created a new booking for stength60 at 2025-10-10
+2025-09-30 10:46:44,534[http-nio-8081-exec-2]INFO useranalyze-User created a new booking for stength60 at 2025-10-10
+2025-09-30 10:46:45,635[http-nio-8081-exec-4]INFO useranalyze-User created a new booking for stength60 at 2025-10-10
+2025-09-30 10:46:46,624[http-nio-8081-exec-10]INFO useranalyze-User created a new booking for stength60 at 2025-10-10
+2025-09-30 10:47:21,509[http-nio-8081-exec-7]INFO useranalyze-User canceled the booking to stength60 at 2100-01-01.
+2025-09-30 10:47:38,028[http-nio-8081-exec-9]INFO useranalyze-Admin added a new workout with the instructor Lars Larsson.
+2025-09-30 10:49:03,827[http-nio-8081-exec-5]INFO useranalyze-Admin updated a workout with name stength60.
+2025-09-30 10:49:12,148[http-nio-8081-exec-10]INFO useranalyze-User created a new booking for stength60 at 2025-10-10
+2025-09-30 10:49:44,855[http-nio-8081-exec-6]INFO useranalyze-User canceled the booking to stength60 at 2025-10-10.
+2025-09-30 10:49:50,336[http-nio-8081-exec-4]INFO useranalyze-User canceled the booking to stength60 at 2025-10-10.
+2025-09-30 10:49:57,640[http-nio-8081-exec-10]INFO useranalyze-User canceled the booking to stength60 at 2025-10-10.
+2025-09-30 11:09:56,745[http-nio-8081-exec-3]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-10
+2025-09-30 11:09:57,812[http-nio-8081-exec-2]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-10
+2025-09-30 11:11:37,203[http-nio-8081-exec-2]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-10
+2025-09-30 11:11:38,310[http-nio-8081-exec-3]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-10
+2025-09-30 11:12:06,405[http-nio-8081-exec-7]INFO useranalyze-Admin added a new workout with the instructor Lars Larsson.
+2025-09-30 11:12:27,930[http-nio-8081-exec-10]INFO useranalyze-User canceled the booking to Benchpress90 at 2025-10-10.
+2025-09-30 11:12:30,656[http-nio-8081-exec-4]INFO useranalyze-User canceled the booking to Benchpress90 at 2025-10-10.
+2025-09-30 11:13:19,628[http-nio-8081-exec-8]INFO useranalyze-Admin updated a workout with name Benchpress90.
+2025-09-30 11:19:52,056[http-nio-8081-exec-1]INFO useranalyze-Admin updated a workout with name yoga.
+2025-09-30 11:20:26,746[http-nio-8081-exec-1]INFO useranalyze-Admin added a new instructor with the name Adam Hemmingsson.
+2025-09-30 11:21:47,113[http-nio-8081-exec-3]INFO useranalyze-Admin updated a workout with name yoga.
+2025-09-30 11:29:48,168[http-nio-8081-exec-3]INFO useranalyze-Admin updated a workout with name Benchpress90.
+2025-09-30 11:29:57,156[http-nio-8081-exec-4]INFO useranalyze-Admin added a new instructor with the name Adam Hemmingsson.
+2025-09-30 11:30:09,237[http-nio-8081-exec-8]INFO useranalyze-Admin updated a workout with name Benchpress90.
+2025-09-30 11:30:40,848[http-nio-8081-exec-8]INFO useranalyze-Admin updated a workout with name Benchpress90.
+2025-09-30 11:30:59,261[http-nio-8081-exec-2]INFO useranalyze-Admin updated a workout with name Benchpress90.
+2025-09-30 11:33:39,659[http-nio-8081-exec-3]INFO useranalyze-Admin updated a workout with name yoga.
+2025-09-30 11:34:28,045[http-nio-8081-exec-9]INFO useranalyze-User created a new booking for yoga at 2025-10-10
+2025-09-30 11:34:30,699[http-nio-8081-exec-5]INFO useranalyze-User created a new booking for yoga at 2025-10-10
+2025-09-30 11:36:08,407[http-nio-8081-exec-7]INFO useranalyze-User canceled the booking to yoga at 2025-10-10.
+2025-09-30 11:36:14,236[http-nio-8081-exec-2]INFO useranalyze-User canceled the booking to yoga at 2025-10-10.
+2025-09-30 11:36:23,888[http-nio-8081-exec-9]INFO useranalyze-Admin updated a workout with name yoga.
+2025-09-30 11:36:47,870[http-nio-8081-exec-3]INFO useranalyze-Admin updated a workout with name yoga.
+2025-09-30 11:46:11,221[http-nio-8081-exec-2]INFO useranalyze-Admin added a new workout with the instructor Lars Larsson.
+2025-09-30 11:46:18,091[http-nio-8081-exec-4]INFO useranalyze-User created a new booking for Benchpress90 at 2025-10-10
+2025-09-30 11:46:41,679[http-nio-8081-exec-4]INFO useranalyze-User canceled the booking to Benchpress90 at 2025-10-10.
+2025-09-30 12:19:29,111[http-nio-8081-exec-2]INFO useranalyze-Admin deleted a workout with id 1.
+2025-09-30 12:20:22,186[http-nio-8081-exec-10]INFO useranalyze-Admin added a new workout with the instructor Lars Larsson.
+2025-09-30 12:20:33,250[http-nio-8081-exec-1]INFO useranalyze-User created a new booking for yosgdxga50 at 2025-10-10
+2025-09-30 12:20:34,300[http-nio-8081-exec-7]INFO useranalyze-User created a new booking for yosgdxga50 at 2025-10-10
+2025-09-30 12:20:35,653[http-nio-8081-exec-8]INFO useranalyze-User created a new booking for yosgdxga50 at 2025-10-10
+2025-09-30 12:20:36,782[http-nio-8081-exec-10]INFO useranalyze-User created a new booking for yosgdxga50 at 2025-10-10
+2025-09-30 12:20:37,813[http-nio-8081-exec-4]INFO useranalyze-User created a new booking for yosgdxga50 at 2025-10-10
+2025-09-30 13:21:05,205[main]INFO useranalyze-Admin added a new instructor with the name Lars Larsson.
+2025-09-30 13:21:37,942[main]INFO useranalyze-Admin added a new instructor with the name Lars Larsson.
+2025-09-30 14:52:24,800[main]INFO useranalyze-Admin added a new instructor with the name Lars Larsson.
+2025-09-30 14:55:10,626[main]INFO useranalyze-Admin added a new instructor with the name Lars Larsson.
+2025-09-30 14:56:35,476[main]INFO useranalyze-Admin added a new instructor with the name Lars Larsson.
+2025-09-30 14:58:27,344[main]INFO useranalyze-Admin added a new instructor with the name Lars Larsson.
+2025-10-01 11:04:37,854[main]INFO useranalyze-Admin deleted a workout with id 1.
+2025-10-01 11:07:54,522[main]INFO useranalyze-Admin deleted a workout with id 1.
+2025-10-01 11:37:48,131[main]INFO useranalyze-Admin deleted a workout with id 1.
+2025-10-01 11:57:29,286[main]INFO useranalyze-Admin deleted a workout with id 1.
+2025-10-01 21:01:21,528[http-nio-8081-exec-1]INFO useranalyze-Admin updated a workout with name Benchpress90.
+2025-10-01 21:02:55,263[http-nio-8081-exec-3]INFO useranalyze-Admin updated a workout with name Benchpress90.
+2025-10-01 21:04:03,502[http-nio-8081-exec-1]INFO useranalyze-Admin updated a workout with name Benchpress90.
+2025-10-02 09:03:30,966[http-nio-8081-exec-2]INFO useranalyze-Admin updated workout with ID: 1
+2025-10-02 09:05:13,965[http-nio-8081-exec-1]INFO useranalyze-Admin updated workout with ID: 1
+2025-10-02 09:05:34,964[http-nio-8081-exec-2]INFO useranalyze-Admin updated workout with ID: 1
+2025-10-02 09:07:48,006[http-nio-8081-exec-2]INFO useranalyze-Admin updated workout with ID: 1
+2025-10-02 09:08:05,069[http-nio-8081-exec-5]INFO useranalyze-Admin updated workout with ID: 1
+2025-10-02 09:09:55,683[http-nio-8081-exec-3]INFO useranalyze-Admin updated workout with ID: 1
+2025-10-02 09:16:03,500[http-nio-8081-exec-3]INFO useranalyze-Admin added a new workout with ID: 2 and the instructor ID: 1.
+2025-10-02 09:16:32,499[http-nio-8081-exec-10]INFO useranalyze-Admin added a new workout with ID: 2 and the instructor ID: 1.
+2025-10-02 09:18:32,422[http-nio-8081-exec-3]INFO useranalyze-Admin added a new workout with ID: 2 and the instructor ID: 1.
+2025-10-02 09:18:44,420[http-nio-8081-exec-6]INFO useranalyze-Admin added a new workout with ID: 3 and the instructor ID: 1.
+2025-10-02 09:20:55,213[http-nio-8081-exec-3]INFO useranalyze-Admin added a new workout with ID: 2 and the instructor ID: 1.
+2025-10-02 09:22:24,075[http-nio-8081-exec-1]INFO useranalyze-Admin added a new workout with ID: 2 and the instructor ID: 1.
+2025-10-02 09:22:47,436[http-nio-8081-exec-2]INFO useranalyze-Admin added a new workout with ID: 3 and the instructor ID: 1.
+2025-10-02 09:22:50,060[http-nio-8081-exec-7]INFO useranalyze-Admin added a new workout with ID: 4 and the instructor ID: 1.
+2025-10-02 09:22:51,171[http-nio-8081-exec-10]INFO useranalyze-Admin added a new workout with ID: 5 and the instructor ID: 1.
+2025-10-02 09:22:57,245[http-nio-8081-exec-6]INFO useranalyze-Admin added a new workout with ID: 6 and the instructor ID: 1.
+2025-10-02 09:22:58,466[http-nio-8081-exec-4]INFO useranalyze-Admin added a new workout with ID: 7 and the instructor ID: 1.
+2025-10-02 10:10:27,905[http-nio-8081-exec-9]INFO useranalyze-Admin added a new workout with ID: 2 and the instructor ID: 1.
+2025-10-02 10:11:09,365[http-nio-8081-exec-8]INFO useranalyze-User created a new booking for yosgdxga50 at 2025-10-10
+2025-10-02 10:14:37,261[http-nio-8081-exec-3]INFO useranalyze-User created a new booking for Benchpress90 with ID: 1 at 2025-10-10
+2025-10-02 10:15:56,323[http-nio-8081-exec-5]INFO useranalyze-Admin added a new workout with ID: 2 and the instructor ID: 1.
+2025-10-02 10:23:23,900[http-nio-8081-exec-1]INFO useranalyze-Admin added a new workout with ID: 2 and the instructor ID: 1.
+2025-10-02 10:39:14,810[http-nio-8081-exec-2]INFO useranalyze-Admin added a new workout with ID: 2 and the instructor ID: 1.
+2025-10-02 10:39:15,998[http-nio-8081-exec-3]INFO useranalyze-Admin added a new workout with ID: 3 and the instructor ID: 1.
+2025-10-02 10:39:17,304[http-nio-8081-exec-4]INFO useranalyze-Admin added a new workout with ID: 4 and the instructor ID: 1.
+2025-10-02 10:39:35,501[http-nio-8081-exec-7]INFO useranalyze-User created a new booking for Benchpress90 with ID: 1 at 2025-10-10
+2025-10-02 10:40:14,013[http-nio-8081-exec-5]INFO useranalyze-User created a new booking for Benchpress90 with ID: 1 at 2025-10-02
+2025-10-02 10:41:09,899[http-nio-8081-exec-10]INFO useranalyze-Admin deleted a workout with id 2.
+2025-10-02 10:47:26,349[http-nio-8081-exec-1]INFO useranalyze-User created a new booking for Benchpress90 with ID: 1 at 2025-10-02
+2025-10-02 10:53:50,439[http-nio-8081-exec-4]INFO useranalyze-User created a new booking for Benchpress90 with ID: 1 at 2025-10-02
+2025-10-02 11:10:38,247[http-nio-8081-exec-1]INFO useranalyze-Admin added a new workout with ID: 3 and the instructor ID: 1.
+2025-10-02 11:11:26,527[http-nio-8081-exec-3]INFO useranalyze-Admin added a new instructor with the name Adam Hemmingsson.
+2025-10-02 11:14:53,462[http-nio-8081-exec-1]INFO useranalyze-Admin added a new instructor with the name Adam Hemmingsson.
+2025-10-02 11:15:06,186[http-nio-8081-exec-3]INFO useranalyze-Admin added a new instructor with the name Adam Hemmingsson.
+2025-10-02 11:15:52,646[http-nio-8081-exec-2]INFO useranalyze-Admin added a new instructor with the name Adam Hemmingsson.
+2025-10-02 11:15:57,502[http-nio-8081-exec-3]INFO useranalyze-Admin added a new instructor with the name Adam Hemmingsson.
+2025-10-02 11:16:05,311[http-nio-8081-exec-4]INFO useranalyze-Admin added a new instructor with the name Adam Hemmingsson.
+2025-10-02 11:16:16,602[http-nio-8081-exec-5]INFO useranalyze-Admin added a new workout with ID: 3 and the instructor ID: 4.
+2025-10-02 11:16:29,821[http-nio-8081-exec-6]INFO useranalyze-Admin added a new workout with ID: 4 and the instructor ID: 4.
+2025-10-02 11:16:34,308[http-nio-8081-exec-7]INFO useranalyze-Admin added a new workout with ID: 5 and the instructor ID: 4.
+2025-10-02 11:17:01,899[http-nio-8081-exec-1]INFO useranalyze-Admin updated workout with ID: 4
+2025-10-02 11:17:46,809[http-nio-8081-exec-2]INFO useranalyze-Admin updated workout with ID: 4
+2025-10-02 11:18:09,138[http-nio-8081-exec-5]INFO useranalyze-User created a new booking for Benchpress90 with ID: 1 at 2025-10-02
+2025-10-02 11:18:42,729[http-nio-8081-exec-8]INFO useranalyze-User created a new booking for Benchpress90 with ID: 1 at 2025-10-04
+2025-10-02 11:19:07,473[http-nio-8081-exec-9]INFO useranalyze-User canceled the booking to Benchpress90 at 2025-10-04.
+2025-10-02 11:19:58,936[http-nio-8081-exec-2]INFO useranalyze-Admin deleted a workout with id 2.
+2025-10-02 11:21:33,733[http-nio-8081-exec-7]INFO useranalyze-Admin updated workout with ID: 1
+2025-10-02 11:24:06,382[http-nio-8081-exec-7]INFO useranalyze-Admin updated workout with ID: 1
+2025-10-02 11:24:26,472[http-nio-8081-exec-4]INFO useranalyze-Admin updated workout with ID: 1
+2025-10-02 11:25:56,347[http-nio-8081-exec-5]INFO useranalyze-User created a new booking for yoga50 with ID: 3 at 2025-10-04
+2025-10-02 11:26:42,070[http-nio-8081-exec-9]INFO useranalyze-User canceled the booking to yoga50 at 2025-10-04.
+2025-10-02 11:26:46,782[http-nio-8081-exec-2]INFO useranalyze-Admin updated workout with ID: 3
+2025-10-02 11:27:06,214[http-nio-8081-exec-7]INFO useranalyze-Admin made a soft delete of workout with ID: 3
+2025-10-02 13:27:52,242[http-nio-8081-exec-3]INFO useranalyze-Admin added a new instructor with the name Adam Hemmingsson.
+2025-10-02 13:28:15,077[http-nio-8081-exec-4]INFO useranalyze-Admin added a new workout with ID: 3 and the instructor ID: 1.
+2025-10-02 13:29:04,455[http-nio-8081-exec-5]INFO useranalyze-Admin updated workout with ID: 3
+2025-10-02 13:29:16,313[http-nio-8081-exec-7]INFO useranalyze-Admin updated workout with ID: 3
+2025-10-02 13:29:18,116[http-nio-8081-exec-6]INFO useranalyze-Admin updated workout with ID: 3
+2025-10-02 13:29:19,416[http-nio-8081-exec-8]INFO useranalyze-Admin updated workout with ID: 3
+2025-10-02 13:29:20,893[http-nio-8081-exec-10]INFO useranalyze-Admin updated workout with ID: 3
+2025-10-02 13:29:49,356[http-nio-8081-exec-9]INFO useranalyze-Admin updated workout with ID: 3
+2025-10-02 13:30:52,430[http-nio-8081-exec-3]INFO useranalyze-Admin updated workout with ID: 1
+2025-10-02 13:38:11,516[http-nio-8081-exec-1]INFO useranalyze-Admin updated workout with ID: 1
+2025-10-02 13:38:29,071[http-nio-8081-exec-7]INFO useranalyze-Admin updated workout with ID: 1
+2025-10-02 13:38:52,939[http-nio-8081-exec-6]INFO useranalyze-Admin updated workout with ID: 1
+2025-10-02 13:39:09,004[http-nio-8081-exec-3]INFO useranalyze-Admin updated workout with ID: 1
+2025-10-02 13:39:24,166[http-nio-8081-exec-10]INFO useranalyze-Admin updated workout with ID: 1
+2025-10-02 13:39:30,595[http-nio-8081-exec-4]INFO useranalyze-Admin updated workout with ID: 1
+2025-10-02 13:40:40,930[http-nio-8081-exec-2]INFO useranalyze-User created a new booking for Benchpress90 with ID: 1 at 2025-10-04
+2025-10-02 13:52:10,973[http-nio-8081-exec-1]INFO useranalyze-User created a new booking for Benchpress90 with ID: 1 at 2025-10-04
+2025-10-02 14:03:16,798[main]INFO useranalyze-Admin added a new instructor with the name Lars Larsson.
+2025-10-02 14:31:25,952[main]INFO useranalyze-Admin deleted a workout with id 3.
+2025-10-02 14:40:35,526[main]INFO useranalyze-Admin deleted a workout with id 2.
+2025-10-02 14:59:59,876[main]INFO useranalyze-Admin deleted a workout with id 4.
+2025-10-02 15:19:20,290[main]INFO useranalyze-Admin added a new workout with ID: 3 and the instructor ID: 2.
+2025-10-02 15:20:23,325[main]INFO useranalyze-Admin added a new workout with ID: 3 and the instructor ID: 2.
+2025-10-02 15:20:23,452[main]INFO useranalyze-Admin deleted a workout with id 5.
+2025-10-02 15:29:30,977[main]INFO useranalyze-Admin updated workout with ID: 3
+2025-10-02 15:29:49,077[main]INFO useranalyze-Admin added a new workout with ID: 3 and the instructor ID: 2.
+2025-10-02 15:29:49,213[main]INFO useranalyze-Admin updated workout with ID: 5
+2025-10-02 15:29:49,234[main]INFO useranalyze-Admin deleted a workout with id 6.
+2025-10-03 08:47:56,405[main]INFO useranalyze-Admin added a new instructor with the name Lars Larsson.
+2025-10-03 10:00:13,136[main]INFO useranalyze-Admin added a new instructor with the name Lars Larsson and ID: null.
+2025-10-03 10:06:32,799[main]INFO useranalyze-Admin deleted a workout with id 3.
+2025-10-03 10:09:01,216[main]INFO useranalyze-Admin updated workout with ID: 3
+2025-10-03 10:17:08,258[main]INFO useranalyze-Admin made a soft delete of workout with ID: 3
+2025-10-03 10:17:37,179[main]INFO useranalyze-Admin added a new workout with ID: 3 and the instructor ID: 2.
+2025-10-03 10:17:37,312[main]INFO useranalyze-Admin deleted a workout with id 4.
+2025-10-03 10:17:37,355[main]INFO useranalyze-Admin updated workout with ID: 6
+2025-10-03 10:17:37,382[main]INFO useranalyze-Admin made a soft delete of workout with ID: 7
+2025-10-03 10:19:01,505[main]INFO useranalyze-Admin added a new workout with ID: 3 and the instructor ID: 2.
+2025-10-03 10:19:01,620[main]INFO useranalyze-Admin deleted a workout with id 4.
+2025-10-03 10:19:01,659[main]INFO useranalyze-Admin updated workout with ID: 6
+2025-10-03 10:19:01,689[main]INFO useranalyze-Admin made a soft delete of workout with ID: 7
+2025-10-03 10:28:22,601[main]INFO useranalyze-Admin added a new workout with ID: 3 and the instructor ID: 2.
+2025-10-03 10:28:22,699[main]INFO useranalyze-Admin deleted a workout with id 4.
+2025-10-03 10:28:22,745[main]INFO useranalyze-Admin updated workout with ID: 6
+2025-10-03 10:28:22,770[main]INFO useranalyze-Admin made a soft delete of workout with ID: 7
+2025-10-03 20:52:26,591[http-nio-8081-exec-3]INFO useranalyze-Admin added a new workout with ID: 3 and the instructor ID: 1.
+2025-10-03 20:52:31,940[http-nio-8081-exec-2]INFO useranalyze-Admin added a new workout with ID: 4 and the instructor ID: 1.
+2025-10-03 20:52:48,273[http-nio-8081-exec-6]INFO useranalyze-User created a new booking for Benchpress90 with ID: 1 at 2025-10-04

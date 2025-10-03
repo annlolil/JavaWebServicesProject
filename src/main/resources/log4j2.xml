@@ -1,0 +1,28 @@
+<Configuration status="info">
+    <properties>
+        <property name="layout">%d[%t]%-5level%logger-%m%n</property>
+    </properties>
+
+    <Appenders>
+
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${layout}"/>
+        </Console>
+
+        <File name="LogFile" fileName="logs/user-analyze.log">
+            <PatternLayout pattern="${layout}"/>
+        </File>
+
+    </Appenders>
+
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+        </Root>
+
+        <Logger name="useranalyze" level="info" additivity="false">
+            <AppenderRef ref="LogFile"/>
+        </Logger>
+    </Loggers>
+
+</Configuration>
