@@ -403,3 +403,17 @@
 2025-10-03 20:52:26,591[http-nio-8081-exec-3]INFO useranalyze-Admin added a new workout with ID: 3 and the instructor ID: 1.
 2025-10-03 20:52:31,940[http-nio-8081-exec-2]INFO useranalyze-Admin added a new workout with ID: 4 and the instructor ID: 1.
 2025-10-03 20:52:48,273[http-nio-8081-exec-6]INFO useranalyze-User created a new booking for Benchpress90 with ID: 1 at 2025-10-04
+2025-10-03 21:04:04,664[main]INFO useranalyze-Admin added a new workout with ID: 3 and the instructor ID: 2.
+2025-10-03 21:04:04,779[main]INFO useranalyze-Admin deleted a workout with id 4.
+2025-10-03 21:04:04,828[main]INFO useranalyze-Admin updated workout with ID: 6
+2025-10-03 21:04:04,882[main]INFO useranalyze-Admin made a soft delete of workout with ID: 7
+2025-10-03 21:05:26,746[main]INFO useranalyze-Admin added a new instructor with the name Lars Larsson and ID: null.
+2025-10-03 21:11:28,624[main]INFO useranalyze-Admin added a new workout with ID: 3 and the instructor ID: 2.
+2025-10-03 21:20:44,437[main]INFO useranalyze-Admin added a new workout with ID: 3 and the instructor ID: 4.
+2025-10-03 21:20:44,559[main]INFO useranalyze-Admin deleted a workout with id 4.
+2025-10-03 21:20:44,611[main]INFO useranalyze-Admin updated workout with ID: 6
+2025-10-03 21:20:44,646[main]INFO useranalyze-Admin made a soft delete of workout with ID: 7
+2025-10-03 21:28:30,242[main]INFO useranalyze-Admin added a new workout with ID: 3 and the instructor ID: 2.
+2025-10-03 21:29:39,852[main]INFO useranalyze-Admin added a new workout with ID: 3 and the instructor ID: 2.
+2025-10-03 21:35:10,076[main]INFO useranalyze-Admin added a new instructor with the name Lars Larsson and ID: null.
+2025-10-03 21:38:17,390[main]INFO useranalyze-Admin updated workout with ID: 1

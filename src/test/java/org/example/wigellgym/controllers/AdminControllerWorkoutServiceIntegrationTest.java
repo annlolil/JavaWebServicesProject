@@ -8,6 +8,7 @@ import org.example.wigellgym.entities.Workout;
 import org.example.wigellgym.repositories.GymBookingRepository;
 import org.example.wigellgym.repositories.InstructorRepository;
 import org.example.wigellgym.repositories.WorkoutRepository;
+import org.example.wigellgym.services.WorkoutService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +24,7 @@ import java.util.Objects;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@SpringBootTest
 @Transactional
 @Rollback
 class AdminControllerWorkoutServiceIntegrationTest {
@@ -32,6 +33,8 @@ class AdminControllerWorkoutServiceIntegrationTest {
     private WorkoutRepository workoutRepository;
     private GymBookingRepository gymBookingRepository;
     private InstructorRepository instructorRepository;
+    private Workout workout;
+    private Instructor instructor;
 
     @Autowired
     public AdminControllerWorkoutServiceIntegrationTest(AdminController adminController, WorkoutRepository workoutRepository, GymBookingRepository gymBookingRepository, InstructorRepository instructorRepository) {
@@ -43,7 +46,14 @@ class AdminControllerWorkoutServiceIntegrationTest {
 
     @BeforeEach
     void setUp() {
-
+        instructor = new Instructor("Lars", "Larsson", "Spinning");
+        workout = new Workout();
+        workout.setWorkoutName("Workout1");
+        workout.setType("Spinning");
+        workout.setMaxNrOfParticipants(5);
+        workout.setInstructor(instructor);
+        workout.setPriceInSEK(500.0);
+        instructorRepository.save(instructor);
     }
 
     @Test
@@ -52,16 +62,6 @@ class AdminControllerWorkoutServiceIntegrationTest {
 
     @Test
     void addWorkout_shouldAddWorkoutAndReturnStatusCodeCreated() {
-
-        //Given
-        Instructor instructor = new Instructor("Lars", "Larsson", "Spinning");
-        Workout workout = new Workout();
-        workout.setWorkoutName("Workout1");
-        workout.setType("Spinning");
-        workout.setMaxNrOfParticipants(5);
-        workout.setInstructor(instructor);
-        workout.setPriceInSEK(500.0);
-        instructorRepository.save(instructor);
 
         //When
         ResponseEntity<Workout> response = adminController.addWorkout(workout);
@@ -75,14 +75,7 @@ class AdminControllerWorkoutServiceIntegrationTest {
     void addWorkout_shouldReturnExceptionWhenInvalidData() {
 
         //Given
-        Instructor instructor = new Instructor("Lars", "Larsson", "Spinning");
-        Workout workout = new Workout();
         workout.setWorkoutName("");
-        workout.setType("Spinning");
-        workout.setMaxNrOfParticipants(5);
-        workout.setInstructor(instructor);
-        workout.setPriceInSEK(500.0);
-        instructorRepository.save(instructor);
 
         //When
         ResponseStatusException exception = assertThrows(ResponseStatusException.class, () -> adminController.addWorkout(workout));
@@ -93,12 +86,25 @@ class AdminControllerWorkoutServiceIntegrationTest {
     }
 
     @Test
+    void addWorkout_shouldReturnExceptionWhenInstructorNotFound() {
+
+        //Given
+        Instructor newInstructor = new Instructor("Lars", "Larsson", "Spinning");
+        newInstructor.setId(2L);
+        workout.setInstructor(newInstructor);
+
+        //When
+        ResponseStatusException exception = assertThrows(ResponseStatusException.class, () -> adminController.addWorkout(workout));
+
+        //Then
+        assertThat(exception.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
+        assertThat(exception.getReason()).isEqualTo("Instructor not found");
+    }
+
+    @Test
     void updateWorkout_shouldUpdateWorkoutAndReturnStatusCodeOk() {
 
         //Given
-        Instructor instructor = new Instructor("Lars", "Larsson", "Strength");
-        Workout workout = new Workout("Strength90", "Group", 10, 500.0, instructor);
-        instructorRepository.save(instructor);
         workoutRepository.save(workout);
         UpdateWorkoutDTO updateWorkoutDTO = new UpdateWorkoutDTO();
         updateWorkoutDTO.setId(workout.getId());
