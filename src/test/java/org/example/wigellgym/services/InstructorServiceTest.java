@@ -39,7 +39,7 @@ class InstructorServiceTest {
     }
 
     @Test
-    void getAllInstructors_shouldReturnAllInstructors() {
+    void getAllInstructors_ShouldReturnAllInstructors() {
 
         List<Instructor> instructors = Arrays.asList(instructor1, instructor2);
 
@@ -49,7 +49,7 @@ class InstructorServiceTest {
     }
 
     @Test
-    void addInstructor_shouldAddInstructor() {
+    void addInstructor_ShouldAddInstructor() {
 
         when(instructorRepository.save(instructor1)).thenReturn(instructor1);
 
@@ -59,7 +59,7 @@ class InstructorServiceTest {
     }
 
     @Test
-    void addInstructor_shouldThrowExceptionWhenInvalidFirstName() {
+    void addInstructor_ShouldThrowException_WhenInvalidFirstName() {
 
         instructor1.setFirstName("");
 
@@ -71,7 +71,7 @@ class InstructorServiceTest {
     }
 
     @Test
-    void addInstructor_shouldThrowExceptionWhenInvalidLastName() {
+    void addInstructor_ShouldThrowException_WhenInvalidLastName() {
 
         instructor1.setLastName("");
 
@@ -83,7 +83,7 @@ class InstructorServiceTest {
     }
 
     @Test
-    void addInstructor_shouldThrowExceptionWhenInvalidSpeciality() {
+    void addInstructor_ShouldThrowException_WhenInvalidSpeciality() {
 
         instructor1.setSpecialty("");
 

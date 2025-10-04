@@ -11,11 +11,18 @@ import org.example.wigellgym.repositories.WorkoutRepository;
 import org.example.wigellgym.services.WorkoutService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.cglib.core.Local;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.annotation.Rollback;
+import org.springframework.test.context.bean.override.mockito.MockitoBean;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.time.LocalDate;
@@ -29,10 +36,11 @@ import static org.junit.jupiter.api.Assertions.*;
 @Rollback
 class AdminControllerWorkoutServiceIntegrationTest {
 
-    private AdminController adminController;
     private WorkoutRepository workoutRepository;
     private GymBookingRepository gymBookingRepository;
     private InstructorRepository instructorRepository;
+    private AdminController adminController;
+
     private Workout workout;
     private Instructor instructor;
 
@@ -46,157 +54,162 @@ class AdminControllerWorkoutServiceIntegrationTest {
 
     @BeforeEach
     void setUp() {
-        instructor = new Instructor("Lars", "Larsson", "Spinning");
+        instructor = new Instructor();
+        instructor.setFirstName("Lars");
+        instructor.setLastName("Larsson");
+        instructor.setSpecialty("Spinning");
+        instructorRepository.save(instructor);
+
         workout = new Workout();
-        workout.setWorkoutName("Workout1");
+        workout.setWorkoutName("Spinning90");
         workout.setType("Spinning");
         workout.setMaxNrOfParticipants(5);
         workout.setInstructor(instructor);
         workout.setPriceInSEK(500.0);
-        instructorRepository.save(instructor);
     }
 
     @Test
-    void addInstructor() {
-    }
+    void addWorkout_ShouldAddWorkoutAndReturnStatusCodeCreated() {
 
-    @Test
-    void addWorkout_shouldAddWorkoutAndReturnStatusCodeCreated() {
-
-        //When
         ResponseEntity<Workout> response = adminController.addWorkout(workout);
 
-        //Then
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.CREATED);
-        assertThat(Objects.equals(response.getBody(), workout));
+        assertThat(response.getBody()).isEqualTo(workout);
     }
 
     @Test
-    void addWorkout_shouldReturnExceptionWhenInvalidData() {
+    void addWorkout_ShouldReturnException_WhenInvalidData() {
 
-        //Given
         workout.setWorkoutName("");
 
-        //When
         ResponseStatusException exception = assertThrows(ResponseStatusException.class, () -> adminController.addWorkout(workout));
 
-        //Then
         assertThat(exception.getStatusCode()).isEqualTo(HttpStatus.BAD_REQUEST);
         assertThat(exception.getReason()).isEqualTo("Workout name is required");
     }
 
     @Test
-    void addWorkout_shouldReturnExceptionWhenInstructorNotFound() {
+    void addWorkout_ShouldReturnException_WhenInstructorNotFound() {
 
-        //Given
-        Instructor newInstructor = new Instructor("Lars", "Larsson", "Spinning");
-        newInstructor.setId(2L);
-        workout.setInstructor(newInstructor);
+        Instructor missingInstructor = new Instructor();
+        missingInstructor.setId(2L);
+        workout.setInstructor(missingInstructor);
 
-        //When
         ResponseStatusException exception = assertThrows(ResponseStatusException.class, () -> adminController.addWorkout(workout));
 
-        //Then
         assertThat(exception.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
         assertThat(exception.getReason()).isEqualTo("Instructor not found");
     }
 
     @Test
-    void updateWorkout_shouldUpdateWorkoutAndReturnStatusCodeOk() {
+    void updateWorkout_ShouldUpdateWorkoutAndReturnStatusCodeOk() {
 
-        //Given
         workoutRepository.save(workout);
         UpdateWorkoutDTO updateWorkoutDTO = new UpdateWorkoutDTO();
         updateWorkoutDTO.setId(workout.getId());
-        updateWorkoutDTO.setWorkoutName("Yoga");
+        updateWorkoutDTO.setWorkoutName(workout.getWorkoutName() + " updated");
 
-        //When
         ResponseEntity<Workout> response = adminController.updateWorkout(updateWorkoutDTO);
 
-        //Then
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
-        assertThat(workout.getWorkoutName()).isEqualTo("Yoga");
+        assertThat(response.getBody()).isEqualTo(workout);
     }
 
     @Test
-    void deleteWorkout_shouldDeleteWorkoutAndReturnStatusCodeOk() {
+    void updateWorkout_ShouldThrowException_WhenWorkoutNotFound() {
 
-        //Given
-        Instructor instructor = new Instructor("Lars", "Larsson", "Strength");
-        Workout workoutToDelete = new Workout("Strength90", "Group", 10, 500.0, instructor);
-        instructorRepository.save(instructor);
-        workoutRepository.save(workoutToDelete);
+        UpdateWorkoutDTO updateWorkoutDTO = new UpdateWorkoutDTO();
+        updateWorkoutDTO.setId(1L);
 
-        //When
-        ResponseEntity<String> response = adminController.deleteWorkout(workoutToDelete.getId());
+        ResponseStatusException exception = assertThrows(ResponseStatusException.class, () -> adminController.updateWorkout(updateWorkoutDTO));
 
-        //Then
+        assertThat(exception.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
+        assertThat(exception.getReason()).isEqualTo("Workout not found");
+    }
+
+    @Test
+    void updateWorkout_ShouldThrowException_WhenWorkoutInUpcomingBooking() {
+
+        workoutRepository.save(workout);
+        GymBooking gymBooking = new GymBooking();
+        gymBooking.setWorkout(workout);
+        gymBooking.setCustomer("Anna");
+        gymBooking.setFirstBookingDiscountPercentage(10.0);
+        gymBooking.setTotalPriceSEK(500.0);
+        gymBooking.setTotalPriceEuro(45.0);
+        gymBooking.setDate(LocalDate.now());
+        gymBooking.setActive(true);
+        gymBookingRepository.save(gymBooking);
+        UpdateWorkoutDTO updateWorkoutDTO = new UpdateWorkoutDTO();
+        updateWorkoutDTO.setId(workout.getId());
+
+        ResponseStatusException exception = assertThrows(ResponseStatusException.class, () -> adminController.updateWorkout(updateWorkoutDTO));
+
+        assertThat(exception.getStatusCode()).isEqualTo(HttpStatus.CONFLICT);
+        assertThat(exception.getReason()).isEqualTo("You can not change workouts in upcoming bookings");
+    }
+
+    @Test
+    void deleteWorkout_ShouldDeleteWorkoutAndReturnStatusCodeOk() {
+
+        workoutRepository.save(workout);
+
+        ResponseEntity<String> response = adminController.deleteWorkout(workout.getId());
+
         assertThat(response.getStatusCode().isSameCodeAs(HttpStatus.OK));
         assertThat(response.getBody()).isEqualTo("Workout deleted");
-        assertThat(workoutRepository.findById(workoutToDelete.getId())).isEmpty();
+        assertThat(workoutRepository.findById(workout.getId())).isEmpty();
     }
 
     @Test
-    void deleteWorkout_shouldSoftDeleteWorkoutWhenInPastBookings() {
+    void deleteWorkout_ShouldSoftDeleteWorkout_WhenInPastBookings() {
 
-        //Given
-        Instructor instructor = new Instructor("Lars", "Larsson", "Strength");
-        Workout workoutToDelete = new Workout("Strength90", "Group", 10, 500.0, instructor);
-        GymBooking gymBooking = new GymBooking(LocalDate.of(2021,1,1), 0.0, 500.0, 45.0, "Anna", workoutToDelete, false);
-        instructorRepository.save(instructor);
-        workoutRepository.save(workoutToDelete);
+        workoutRepository.save(workout);
+        GymBooking gymBooking = new GymBooking();
+        gymBooking.setDate(LocalDate.of(2021,1,1));
+        gymBooking.setWorkout(workout);
+        gymBooking.setCustomer("Anna");
+        gymBooking.setFirstBookingDiscountPercentage(10.0);
+        gymBooking.setTotalPriceSEK(500.0);
+        gymBooking.setTotalPriceEuro(45.0);
+        gymBooking.setActive(false);
         gymBookingRepository.save(gymBooking);
 
-        //When
-        ResponseEntity<String> response = adminController.deleteWorkout(workoutToDelete.getId());
+        ResponseEntity<String> response = adminController.deleteWorkout(workout.getId());
 
-        //Then
         assertThat(response.getStatusCode().isSameCodeAs(HttpStatus.OK));
         assertThat(response.getBody()).isEqualTo("Workout deleted");
-        assertTrue(workoutToDelete.isDeleted());
+        assertTrue(workout.isDeleted());
     }
 
     @Test
-    void deleteWorkout_shouldThrowExceptionWhenNotFound() {
+    void deleteWorkout_ShouldThrowException_WhenNotFound() {
 
-        //Given/When
         ResponseStatusException exception = assertThrows(ResponseStatusException.class, () ->
                     adminController.deleteWorkout(99L));
 
-        //Then
         assertThat(exception.getReason()).isEqualTo("Workout not found");
         assertThat(exception.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
     }
 
     @Test
-    void deleteWorkout_shouldThrowExceptionWhenInUpcomingBooking() {
+    void deleteWorkout_ShouldThrowException_WhenInUpcomingBooking() {
 
-        //Given
-        Instructor instructor = new Instructor("Lars", "Larsson", "Strength");
-        Workout workoutToDelete = new Workout("Strength90", "Group", 10, 500.0, instructor);
-        GymBooking gymBooking = new GymBooking(LocalDate.now(), 0.0, 500.0, 45.0, "Anna", workoutToDelete, true);
-        instructorRepository.save(instructor);
-        workoutRepository.save(workoutToDelete);
+        workoutRepository.save(workout);
+        GymBooking gymBooking = new GymBooking();
+        gymBooking.setDate(LocalDate.now());
+        gymBooking.setWorkout(workout);
+        gymBooking.setCustomer("Anna");
+        gymBooking.setFirstBookingDiscountPercentage(10.0);
+        gymBooking.setTotalPriceSEK(500.0);
+        gymBooking.setTotalPriceEuro(45.0);
+        gymBooking.setActive(true);
         gymBookingRepository.save(gymBooking);
 
-        //When
         ResponseStatusException exception = assertThrows(ResponseStatusException.class, () ->
-                adminController.deleteWorkout(workoutToDelete.getId()));
+                adminController.deleteWorkout(workout.getId()));
 
-        //Then
         assertThat(exception.getReason()).isEqualTo("You can not delete workout in upcoming bookings");
         assertThat(exception.getStatusCode()).isEqualTo(HttpStatus.CONFLICT);
-    }
-
-    @Test
-    void getCanceledBookings() {
-    }
-
-    @Test
-    void getUpcomingBookings() {
-    }
-
-    @Test
-    void getPastBookings() {
     }
 }

@@ -417,3 +417,20 @@
 2025-10-03 21:29:39,852[main]INFO useranalyze-Admin added a new workout with ID: 3 and the instructor ID: 2.
 2025-10-03 21:35:10,076[main]INFO useranalyze-Admin added a new instructor with the name Lars Larsson and ID: null.
 2025-10-03 21:38:17,390[main]INFO useranalyze-Admin updated workout with ID: 1
+2025-10-04 17:20:56,393[main]INFO useranalyze-Admin updated workout with ID: 1
+2025-10-04 17:31:44,326[main]INFO useranalyze-Admin updated workout with ID: 1
+2025-10-04 17:45:20,112[main]INFO useranalyze-Admin added a new workout with ID: 1 and the instructor ID: 4.
+2025-10-04 17:45:20,226[main]INFO useranalyze-Admin deleted a workout with id 2.
+2025-10-04 17:45:20,303[main]INFO useranalyze-Admin made a soft delete of workout with ID: 6
+2025-10-04 17:46:48,833[main]INFO useranalyze-Admin added a new workout with ID: 1 and the instructor ID: 4.
+2025-10-04 17:46:48,941[main]INFO useranalyze-Admin deleted a workout with id 2.
+2025-10-04 17:46:48,998[main]INFO useranalyze-Admin updated workout with ID: 5
+2025-10-04 17:46:49,026[main]INFO useranalyze-Admin made a soft delete of workout with ID: 6
+2025-10-04 17:58:21,697[main]INFO useranalyze-Admin updated workout with ID: 1
+2025-10-04 20:22:53,042[main]INFO useranalyze-Admin updated workout with ID: 1
+2025-10-04 21:23:50,535[main]INFO useranalyze-Admin added a new workout with ID: 1 and the instructor ID: 1.
+2025-10-04 21:51:40,796[main]INFO useranalyze-Admin deleted a workout with id 1.
+2025-10-04 22:00:45,835[main]INFO useranalyze-Admin added a new workout with ID: 1 and the instructor ID: 1.
+2025-10-04 22:00:46,011[main]INFO useranalyze-Admin deleted a workout with id 2.
+2025-10-04 22:00:46,063[main]INFO useranalyze-Admin updated workout with ID: 4
+2025-10-04 22:00:46,091[main]INFO useranalyze-Admin made a soft delete of workout with ID: 6
