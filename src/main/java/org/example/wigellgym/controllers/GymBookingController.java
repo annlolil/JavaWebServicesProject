@@ -1,9 +1,7 @@
 package org.example.wigellgym.controllers;
 
 import org.example.wigellgym.entities.GymBooking;
-import org.example.wigellgym.entities.Workout;
 import org.example.wigellgym.services.GymBookingService;
-import org.example.wigellgym.services.WorkoutService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,20 +12,13 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/wigellgym")
-public class CustomerController {
+public class GymBookingController {
 
-    private final WorkoutService workoutService;
     private final GymBookingService gymBookingService;
 
     @Autowired
-    public CustomerController(WorkoutService workoutService, GymBookingService gymBookingService) {
-        this.workoutService = workoutService;
+    public GymBookingController(GymBookingService gymBookingService) {
         this.gymBookingService = gymBookingService;
-    }
-
-    @GetMapping("/workouts")
-    public ResponseEntity<List<Workout>> getAllWorkouts() {
-        return new ResponseEntity<>(workoutService.getAllWorkouts(), HttpStatus.OK);
     }
 
     @PostMapping("/bookworkout")
@@ -43,5 +34,20 @@ public class CustomerController {
     @GetMapping("/mybookings")
     public ResponseEntity<List<GymBooking>> getMyBookings(Authentication user) {
         return new ResponseEntity<>(gymBookingService.getMyBookings(user), HttpStatus.OK);
+    }
+
+    @GetMapping("/listcanceled")
+    public ResponseEntity<List<GymBooking>> getCanceledBookings() {
+        return new ResponseEntity<>(gymBookingService.getCanceledBookings(), HttpStatus.OK);
+    }
+
+    @GetMapping("/listupcoming")
+    public ResponseEntity<List<GymBooking>> getUpcomingBookings() {
+        return new ResponseEntity<>(gymBookingService.getUpcomingBookings(), HttpStatus.OK);
+    }
+
+    @GetMapping("/listpast")
+    public ResponseEntity<List<GymBooking>> getPastBookings() {
+        return new ResponseEntity<>(gymBookingService.getPastBookings(), HttpStatus.OK);
     }
 }
