@@ -39,3 +39,4 @@
 2025-10-09 12:44:24,009[main]INFO useranalyze-Admin added a new workout with ID: null and the instructor ID: 1.
 2025-10-09 12:44:24,034[main]INFO useranalyze-Admin deleted a workout with id 1.
 2025-10-09 12:44:24,053[main]INFO useranalyze-Admin updated workout with ID: 1
+2025-10-09 12:51:06,251[http-nio-8081-exec-5]INFO useranalyze-Admin added a new workout with the instructor ID: 1.
