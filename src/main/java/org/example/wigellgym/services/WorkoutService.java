@@ -52,8 +52,7 @@ public class WorkoutService implements WorkoutServiceInterface {
 
         workoutRepository.save(workout);
 
-        LOGGER.info("Admin added a new workout with ID: {} and the instructor ID: {}.",
-                workout.getId(), workout.getInstructor().getId());
+        LOGGER.info("Admin added a new workout with the instructor ID: {}.", workout.getInstructor().getId());
 
         return workout;
     }

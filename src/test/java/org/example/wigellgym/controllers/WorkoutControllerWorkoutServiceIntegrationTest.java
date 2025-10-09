@@ -1,6 +1,6 @@
 package org.example.wigellgym.controllers;
 
-import jakarta.transaction.Transactional;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.example.wigellgym.dtos.UpdateWorkoutDTO;
 import org.example.wigellgym.entities.GymBooking;
 import org.example.wigellgym.entities.Instructor;
@@ -11,120 +11,60 @@ import org.example.wigellgym.repositories.WorkoutRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.test.annotation.Rollback;
-import org.springframework.web.server.ResponseStatusException;
+import org.springframework.http.MediaType;
+import org.springframework.test.context.bean.override.mockito.MockitoBean;
+import org.springframework.test.web.servlet.MockMvc;
 
 import java.time.LocalDate;
 import java.util.List;
-import java.util.Objects;
-
-import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
+import java.util.Optional;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.*;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @SpringBootTest
-@Transactional
-@Rollback
+@AutoConfigureMockMvc(addFilters = false)
 class WorkoutControllerWorkoutServiceIntegrationTest {
 
-    private WorkoutRepository workoutRepository;
-    private GymBookingRepository gymBookingRepository;
-    private InstructorRepository instructorRepository;
-    private WorkoutController workoutController;
-
-    private Workout workout;
-    private Instructor instructor;
+    @Autowired
+    private MockMvc mockMvc;
 
     @Autowired
-    public WorkoutControllerWorkoutServiceIntegrationTest(WorkoutRepository workoutRepository, GymBookingRepository gymBookingRepository, InstructorRepository instructorRepository, WorkoutController workoutController) {
-        this.workoutRepository = workoutRepository;
-        this.gymBookingRepository = gymBookingRepository;
-        this.instructorRepository = instructorRepository;
-        this.workoutController = workoutController;
-    }
+    private ObjectMapper objectMapper;
+
+    @MockitoBean
+    private WorkoutRepository workoutRepository;
+
+    @MockitoBean
+    private InstructorRepository instructorRepository;
+
+    @MockitoBean
+    private GymBookingRepository gymBookingRepository;
+
+    private Instructor instructor;
+    private Workout workout;
+    private GymBooking gymBooking;
 
     @BeforeEach
     void setUp() {
         instructor = new Instructor();
+        instructor.setId(1L);
         instructor.setFirstName("Lars");
         instructor.setLastName("Larsson");
         instructor.setSpecialty("Spinning");
-        instructorRepository.save(instructor);
 
         workout = new Workout();
+        workout.setId(1L);
         workout.setWorkoutName("Spinning90");
-        workout.setType("Spinning");
+        workout.setType("Group");
         workout.setMaxNrOfParticipants(5);
-        workout.setInstructor(instructor);
         workout.setPriceInSEK(500.0);
-    }
+        workout.setInstructor(instructor);
 
-    @Test
-    void addWorkout_ShouldAddWorkoutAndReturnStatusCodeCreated_WhenValidInput() {
-
-        ResponseEntity<Workout> response = workoutController.addWorkout(workout);
-
-        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.CREATED);
-        assertThat(response.getBody()).isNotNull();
-    }
-
-    @Test
-    void addWorkout_ShouldReturnStatusCodeBadRequest_WhenInvalidInput() {
-
-        workout.setWorkoutName("");
-
-        ResponseStatusException exception = assertThrows(ResponseStatusException.class, () -> workoutController.addWorkout(workout));
-
-        assertThat(exception.getStatusCode()).isEqualTo(HttpStatus.BAD_REQUEST);
-        assertThat(exception.getReason()).isEqualTo("Workout name is required");
-    }
-
-    @Test
-    void addWorkout_ShouldReturnStatusCodeNotFound_WhenInstructorNotFound() {
-
-        Instructor missingInstructor = new Instructor();
-        missingInstructor.setId(2L);
-        workout.setInstructor(missingInstructor);
-
-        ResponseStatusException exception = assertThrows(ResponseStatusException.class, () -> workoutController.addWorkout(workout));
-
-        assertThat(exception.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
-        assertThat(exception.getReason()).isEqualTo("Instructor not found");
-    }
-
-    @Test
-    void updateWorkout_ShouldUpdateWorkoutAndReturnStatusCodeOk_WhenFound() {
-
-        workoutRepository.save(workout);
-        UpdateWorkoutDTO updateWorkoutDTO = new UpdateWorkoutDTO();
-        updateWorkoutDTO.setId(workout.getId());
-        updateWorkoutDTO.setWorkoutName("New workout name");
-
-        ResponseEntity<Workout> response = workoutController.updateWorkout(updateWorkoutDTO);
-
-        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
-        assertEquals("New workout name", Objects.requireNonNull(response.getBody()).getWorkoutName());
-    }
-
-    @Test
-    void updateWorkout_ShouldReturnStatusCodeNotFound_WhenWorkoutNotFound() {
-
-        UpdateWorkoutDTO updateWorkoutDTO = new UpdateWorkoutDTO();
-        updateWorkoutDTO.setId(1L);
-
-        ResponseStatusException exception = assertThrows(ResponseStatusException.class, () -> workoutController.updateWorkout(updateWorkoutDTO));
-
-        assertThat(exception.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
-        assertThat(exception.getReason()).isEqualTo("Workout not found");
-    }
-
-    @Test
-    void updateWorkout_ShouldReturnStatusCodeConflict_WhenWorkoutInUpcomingBooking() {
-
-        workoutRepository.save(workout);
-        GymBooking gymBooking = new GymBooking();
+        gymBooking = new GymBooking();
         gymBooking.setWorkout(workout);
         gymBooking.setCustomer("Anna");
         gymBooking.setFirstBookingDiscountPercentage(10.0);
@@ -132,88 +72,131 @@ class WorkoutControllerWorkoutServiceIntegrationTest {
         gymBooking.setTotalPriceEuro(45.0);
         gymBooking.setDate(LocalDate.of(2099, 1, 1));
         gymBooking.setActive(true);
-        gymBookingRepository.save(gymBooking);
+    }
+
+    @Test
+    void addWorkout_ShouldAddWorkoutAndReturnStatusCodeCreated() throws Exception {
+
+        when(instructorRepository.findById(1L)).thenReturn(Optional.of(instructor));
+
+        mockMvc.perform(post("/api/wigellgym/addworkout")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(workout)))
+                .andExpect(status().isCreated())
+                .andExpect(jsonPath("$.workoutName").value("Spinning90"))
+                .andExpect(jsonPath("$.instructor.firstName").value("Lars"));
+
+        verify(instructorRepository, times(1)).findById(1L);
+    }
+
+    @Test
+    void addWorkout_ShouldReturnBadRequest_WhenWorkoutNameIsMissing() throws Exception {
+        workout.setWorkoutName("");
+
+        mockMvc.perform(post("/api/wigellgym/addworkout")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(workout)))
+                .andExpect(status().isBadRequest())
+                .andExpect(status().reason("Workout name is required"));
+    }
+
+    @Test
+    void updateWorkout_ShouldUpdateWorkoutAndReturnStatusCodeOk_WhenFound() throws Exception {
+
         UpdateWorkoutDTO updateWorkoutDTO = new UpdateWorkoutDTO();
-        updateWorkoutDTO.setId(workout.getId());
+        updateWorkoutDTO.setId(1L);
+        updateWorkoutDTO.setWorkoutName("New workout name");
 
-        ResponseStatusException exception = assertThrows(ResponseStatusException.class, () -> workoutController.updateWorkout(updateWorkoutDTO));
+        Workout updatedWorkout = new Workout();
+        updatedWorkout.setId(1L);
+        updatedWorkout.setWorkoutName(updateWorkoutDTO.getWorkoutName());
+        updatedWorkout.setType("Group");
+        updatedWorkout.setMaxNrOfParticipants(5);
+        updatedWorkout.setPriceInSEK(500.0);
+        updatedWorkout.setInstructor(instructor);
 
-        assertThat(exception.getStatusCode()).isEqualTo(HttpStatus.CONFLICT);
-        assertThat(exception.getReason()).isEqualTo("You can not change workouts in upcoming bookings");
+        when(workoutRepository.findById(1L)).thenReturn(Optional.of(workout));
+
+        mockMvc.perform(put("/api/wigellgym/updateworkout")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(updateWorkoutDTO)))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.workoutName").value("New workout name"))
+                .andExpect(jsonPath("$.type").value("Group"))
+                .andExpect(jsonPath("$.maxNrOfParticipants").value(5))
+                .andExpect(jsonPath("$.priceInSEK").value(500.0))
+                .andExpect(jsonPath("$.instructor.firstName").value("Lars"))
+                .andExpect(jsonPath("$.instructor.lastName").value("Larsson"))
+                .andExpect(jsonPath("$.instructor.specialty").value("Spinning"))
+                .andExpect(jsonPath("$.deleted").value(false));
+
+        verify(workoutRepository, times(1)).findById(1L);
     }
 
     @Test
-    void deleteWorkout_ShouldDeleteWorkoutAndReturnStatusCodeOk_WhenFound() {
+    void updateWorkout_ShouldReturnConflict_WhenWorkoutHasFutureBookings() throws Exception {
 
-        workoutRepository.save(workout);
+        UpdateWorkoutDTO updateWorkoutDTO = new UpdateWorkoutDTO();
+        updateWorkoutDTO.setId(1L);
+        updateWorkoutDTO.setWorkoutName("Conflict Name");
 
-        ResponseEntity<String> response = workoutController.deleteWorkout(workout.getId());
+        when(gymBookingRepository.findByWorkout(any())).thenReturn(List.of(gymBooking));
+        when(workoutRepository.findById(1L)).thenReturn(Optional.of(workout));
 
-        assertThat(response.getStatusCode().isSameCodeAs(HttpStatus.OK));
-        assertThat(response.getBody()).isEqualTo("Workout deleted");
-        assertThat(workoutRepository.findById(workout.getId())).isEmpty();
+        mockMvc.perform(put("/api/wigellgym/updateworkout")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(updateWorkoutDTO)))
+                .andExpect(status().isConflict())
+                .andExpect(status().reason("You can not change workouts in upcoming bookings"));
+
+        verify(workoutRepository).findById(1L);
+        verify(gymBookingRepository).findByWorkout(workout);
     }
 
     @Test
-    void deleteWorkout_ShouldSoftDeleteWorkoutAndReturnStatusCodeOk_WhenInPastBookings() {
+    void deleteWorkout_ShouldDeleteWorkoutAndReturnStatusCodeOk_WhenFound() throws Exception {
 
-        workoutRepository.save(workout);
-        GymBooking gymBooking = new GymBooking();
-        gymBooking.setDate(LocalDate.of(2021,1,1));
-        gymBooking.setWorkout(workout);
-        gymBooking.setCustomer("Anna");
-        gymBooking.setFirstBookingDiscountPercentage(10.0);
-        gymBooking.setTotalPriceSEK(500.0);
-        gymBooking.setTotalPriceEuro(45.0);
-        gymBooking.setActive(false);
-        gymBookingRepository.save(gymBooking);
+        when(workoutRepository.findById(1L)).thenReturn(Optional.of(workout));
 
-        ResponseEntity<String> response = workoutController.deleteWorkout(workout.getId());
+        mockMvc.perform(delete("/api/wigellgym/remworkout/{id}", 1L))
+                .andExpect(status().isOk())
+                .andExpect(content().string("Workout deleted"));
 
-        assertThat(response.getStatusCode().isSameCodeAs(HttpStatus.OK));
-        assertThat(response.getBody()).isEqualTo("Workout deleted");
-        assertTrue(workout.isDeleted());
+        verify(workoutRepository, times(1)).findById(1L);
     }
 
     @Test
-    void deleteWorkout_ShouldReturnStatusCodeNotFound_WhenNotFound() {
+    void deleteWorkout_ShouldReturnConflict_WhenInUpcomingBooking() throws Exception {
 
-        ResponseStatusException exception = assertThrows(ResponseStatusException.class, () ->
-                    workoutController.deleteWorkout(99L));
+        when(workoutRepository.findById(workout.getId())).thenReturn(Optional.of(workout));
+        when(gymBookingRepository.findByWorkout(workout)).thenReturn(List.of(gymBooking));
 
-        assertThat(exception.getReason()).isEqualTo("Workout not found");
-        assertThat(exception.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
+        mockMvc.perform(delete("/api/wigellgym/remworkout/{id}", workout.getId()))
+                .andExpect(status().isConflict())
+                .andExpect(status().reason("You can not delete workout in upcoming bookings"));
+
+        verify(workoutRepository, times(1)).findById(workout.getId());
+        verify(gymBookingRepository, times(1)).findByWorkout(workout);
+
     }
 
     @Test
-    void deleteWorkout_ShouldReturnStatusCodeConflict_WhenInUpcomingBooking() {
+    void getAllWorkouts_ShouldReturnOnlyNotSoftDeletedWorkouts() throws Exception {
 
-        workoutRepository.save(workout);
-        GymBooking gymBooking = new GymBooking();
-        gymBooking.setDate(LocalDate.of(2099,1,1));
-        gymBooking.setWorkout(workout);
-        gymBooking.setCustomer("Anna");
-        gymBooking.setFirstBookingDiscountPercentage(10.0);
-        gymBooking.setTotalPriceSEK(500.0);
-        gymBooking.setTotalPriceEuro(45.0);
-        gymBooking.setActive(true);
-        gymBookingRepository.save(gymBooking);
+        workout.setDeleted(false);
 
-        ResponseStatusException exception = assertThrows(ResponseStatusException.class, () ->
-                workoutController.deleteWorkout(workout.getId()));
+        Workout workout2 = new Workout();
+        workout2.setWorkoutName("Spinning60");
+        workout2.setDeleted(false);
 
-        assertThat(exception.getReason()).isEqualTo("You can not delete workout in upcoming bookings");
-        assertThat(exception.getStatusCode()).isEqualTo(HttpStatus.CONFLICT);
-    }
+        when(workoutRepository.streamWorkoutByDeleted(false)).thenReturn(List.of(workout, workout2));
 
-    @Test
-    void getAllWorkouts() {
+        mockMvc.perform(get("/api/wigellgym/workouts"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.length()").value(2))
+                .andExpect(jsonPath("$[0].workoutName").value("Spinning90"))
+                .andExpect(jsonPath("$[1].workoutName").value("Spinning60"));
 
-        workoutRepository.save(workout);
-
-        ResponseEntity<List<Workout>> response = workoutController.getAllWorkouts();
-
-        assertThat(response.getStatusCode().isSameCodeAs(HttpStatus.OK));
-        assertThat(response.getBody()).isNotNull();
+        verify(workoutRepository, times(1)).streamWorkoutByDeleted(false);
     }
 }
